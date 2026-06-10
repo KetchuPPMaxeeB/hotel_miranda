@@ -1,4 +1,4 @@
-const gdb = require('./bookingDB');
+const gdb = require('./guestsDB');
 
 async function getAllGuests(req, res) {
     const guests = await gdb.getAllGuests();
@@ -7,6 +7,7 @@ async function getAllGuests(req, res) {
 
 async function getGuestByID(req, res) {
     const guest = await gdb.getGuestByID(req.params.id);
+    console.log("Контроллер вызван");
     res.json(guest);
 };
 

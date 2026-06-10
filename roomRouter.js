@@ -1,5 +1,5 @@
 const express = require('express');
-const route = express.Router();
+const router = express.Router();
 const controller = require('./roomController');
 
 router.get('/room', controller.getAllRooms);
@@ -8,7 +8,7 @@ router.get('/room/:id', controller.getRoomByID);
 
 router.post('/room', controller.createRoom);
 
-router.post('/room/:id', controller.updateRoom);
+router.put('/room/:id', controller.updateRoom);
 
 router.delete('/room/:id', controller.deleteRoom);
 

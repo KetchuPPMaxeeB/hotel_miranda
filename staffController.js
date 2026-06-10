@@ -1,27 +1,27 @@
-const sdb = require('./roomDB');
+const sdb = require('./staffDB');
 
 async function getAllStaff(req, res) {
-    const staff = await rdb.getAllStaff();
+    const staff = await sdb.getAllStaff();
     res.json(staff);
 };
 
 async function getStaffByID(req, res) {
-    const staff = await rdb.getStaffByID(req.params.id);
+    const staff = await sdb.getStaffByID(req.params.id);
     res.json(staff);
 };
 
 async function createStaff(req, res) {
-    const staff = await rdb.createStaff(req.body.name, req.body.salary, req.body.profession);
+    const staff = await sdb.createStaff(req.body.name, req.body.salary, req.body.profession);
     res.json(staff);
 };
 
 async function updateStaff(req, res) {
-    const staff = await rdb.updateStaff(req.params.id, req.body.name, req.body.salary, req.body.profession);
+    const staff = await sdb.updateStaff(req.params.id, req.body.name, req.body.salary, req.body.profession);
     res.json(staff);
 };
 
 async function deleteStaff(req, res) {
-    const staff = await rdb.deleteStaff(req.params.id);
+    const staff = await sdb.deleteStaff(req.params.id);
     res.json(staff);
 };
 

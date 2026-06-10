@@ -7,6 +7,7 @@ async function getAllGuests() {
 
 async function getGuestByID(id) {
     const result = await pool.query('SELECT * FROM guests WHERE id=$1', [id]);
+    console.log("DB вызвана");
     return result.rows;
 };
 
