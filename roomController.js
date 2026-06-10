@@ -6,22 +6,22 @@ async function getAllRooms(req, res) {
 };
 
 async function getRoomByID(req, res) {
-    const room = await rdb.getRoomByID();
+    const room = await rdb.getRoomByID(req.params.id);
     res.json(room);
 };
 
 async function createRoom(req, res) {
-    const room = await rdb.createRoom();
+    const room = await rdb.createRoom(req.body.room_number, req.body.price, req.body.type);
     res.json(room);
 };
 
 async function updateRoom(req, res) {
-    const room = await rdb.updateRoom();
+    const room = await rdb.updateRoom(req.params.id, req.body.room_number, req.body.price, req.body.type);
     res.json(room);
 };
 
 async function deleteRoom(req, res) {
-    const room = await rdb.deleteRoom();
+    const room = await rdb.deleteRoom(req.params.id);
     res.json(room);
 };
 
