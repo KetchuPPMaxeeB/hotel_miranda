@@ -7,7 +7,6 @@ async function getAllGuests(req, res) {
 
 async function getGuestByID(req, res) {
     const guest = await gdb.getGuestByID(req.params.id);
-    console.log("Контроллер вызван");
     res.json(guest);
 };
 
