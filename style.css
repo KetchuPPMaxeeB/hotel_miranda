@@ -1,0 +1,323 @@
+:root {
+    --color-bg: #0d0a1a;
+    --color-surface: #1a1428;
+    --color-card: #221a35;
+    --bg-orange: rgb(39, 26, 8);
+    
+    --color-purple: #7b3fc4;
+    --color-purple-light: #9d5fe0;
+    --color-orange: #d4820a;
+    --color-orange-light: #f0a030;
+    
+    --color-text: #ffffff;
+    --color-text-secondary: #b0a8c8;
+    --color-text-muted: #6b6080;
+    
+    --color-border: #2e2448;
+    
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-pill: 100px;
+    
+    --font-heading: 'Vela Sans', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    color: #ffffff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+body {
+    /* background: linear-gradient(110deg, var(--color-bg), var(--bg-orange), var(--color-bg)); */
+    background: linear-gradient(110deg, var(--color-bg), var(--color-surface), var(--color-bg));
+    font-family: var(--font-body);
+    color: var(--color-text);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text);
+    transition: 0.3s all ease;
+}
+a:hover {
+    transform: translateY(-2px);
+}
+/* header */
+
+.logo {
+    letter-spacing: -10px;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.left nav {
+    font-weight: 550;
+    font-size: 30px;
+}
+
+.title {
+    font-weight: 650;
+    font-size: 72px;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+.subtitle {
+    font-size: 40px;
+    font-weight: 600;
+    color: #dedede;
+}
+
+.book {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(65deg, #8B3FAD, var(--color-orange));
+    border-radius: 100px;
+    border: none;
+    font-size: 20px;
+    font-weight: 550;
+    color: var(--color-text);
+    font-size: 32px;
+    /* width: 20rem; */
+    padding: 15px 40px;
+    transition: 0.3s all ease;
+    margin-top: 1rem;
+}
+.book:hover {
+    transform: translateY(-2px);
+}
+
+.upper-main {
+    background-image: url('./MR_hotel.png');
+    background-size: cover;
+    height: 100vh;
+}
+
+.glass {
+    background-color: rgba(255, 255, 255, 0.03);
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(3px);
+    height: inherit;
+}
+
+.upper-main .glass header {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px;
+}
+
+.upper-main .glass .left {
+    display: flex;
+    gap: 3rem;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.upper-main .glass nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.sign-in {
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--color-text);
+    background-color: var(--color-surface);
+    border-radius: 40px;
+    padding: 15px 45px;
+    border: 2px white solid;
+    color: var(--color-text);
+    transition: 0.3s all ease;
+}
+.sign-in:hover {
+    background-color: var(--color-border);
+    transform: translateY(-2px);
+}
+.sign-in:active {
+    background-color: var(--color-orange);
+}
+
+/* hero itself */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.info-upper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* Bottom cards row */
+
+.bottom-preview {
+    display: flex;
+    justify-content: flex-end;
+    margin: 40px;
+}
+
+.img-container-top {
+    padding: 37px 28px;
+    border-radius: 30px;
+    border: 2px white solid;
+    color: var(--color-text);
+    font-weight: 500;
+    font-size: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(100px);
+}
+
+
+/* Rooms cards scrollable */
+
+.rooms {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0;
+}
+
+.room-title {
+    text-align: center;
+    font-size: 48px;
+    padding: 2rem;
+}
+.room-type {
+    font-size: 30px;
+    font-weight: 800;
+}
+.room-price {
+    font-size: 24px;
+    color: var(--color-orange-light);
+    font-weight: 700;
+    letter-spacing: 0px;
+}
+
+.room-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--color-card);
+    border: 2px var(--color-border) solid;
+    border-radius: 20px;
+    padding: 1rem;
+}
+.img-container {
+    background-color: #6b6080;
+    border-radius: 20px;
+    padding: 5rem 0;
+}
+
+.room-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.room-more-btn {
+    background-color: var(--color-purple);
+    border-radius: 50px;
+    border: none;
+    padding: 1rem 0;
+    color: var(--color-text);
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.3s all ease;
+}
+.room-more-btn:hover {
+    transform: translateY(-2px);
+    background-color: var(--color-purple-light);
+}
+
+.room-scroll {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-flow: column;
+    grid-auto-columns: 350px;
+    overflow-x: auto;
+    gap: 1rem;
+    scrollbar-width: none;
+    padding: 1rem 2rem;
+}
+
+/* About section */
+
+.about-card {
+    background-color: var(--color-card);
+    border: 2px var(--color-border) solid;
+    border-radius: 40px;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    margin: 0 15rem
+}
+
+.img-cont-about {
+    background-color: #6b6080;
+    border-radius: 20px;
+    padding: 5rem 0;
+}
+
+.about-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.about-title {
+    font-weight:800;
+    font-size: 36px;
+}
+
+.about-text {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/* футер */
+
+footer {
+    background-color: var(--color-surface);
+    padding: 3rem 2rem 1.5rem;
+    border-top: 1px solid var(--color-border);
+    margin-top: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-links, .footer-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.footer-copy {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 14px;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1rem;
+}
