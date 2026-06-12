@@ -172,6 +172,7 @@ a:hover {
     display: flex;
     justify-content: flex-end;
     margin: 40px;
+    max-height: 125px;
 }
 
 .img-container-top {

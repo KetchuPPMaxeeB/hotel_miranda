@@ -9,7 +9,7 @@ async function loadRooms() {
         const card = document.createElement('article');
         card.className = 'room-card';
         card.innerHTML = `<div class="img-container">
-                        <img src=""http://localhost:3000${room.image_url}"" alt="Room image">
+                        <img src="http://localhost:3000${room.image_url}" alt="Room image">
                     </div>
                     <div class="room-info">
                         <p class="room-type">${room.type}</p>
