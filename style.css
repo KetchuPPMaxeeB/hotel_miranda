@@ -222,7 +222,12 @@ a:hover {
 .img-container {
     background-color: #6b6080;
     border-radius: 20px;
-    padding: 5rem 0;
+    height: 200px;
+    overflow: hidden;
+}
+.img-container img {
+    object-fit: cover;
+    width: 100%;
 }
 
 .room-info {
@@ -271,9 +276,15 @@ a:hover {
 }
 
 .img-cont-about {
-    background-color: #6b6080;
+    background: #6b6080;
     border-radius: 20px;
-    padding: 5rem 0;
+    overflow: hidden;
+    /* padding: 5rem 0; */
+}
+.img-cont-about img {
+    object-fit: cover;
+    height: 400px;
+    width: 100%;
 }
 
 .about-info {

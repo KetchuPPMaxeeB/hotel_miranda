@@ -1,0 +1,179 @@
+:root {
+    --color-bg: #0d0a1a;
+    --color-surface: #1a1428;
+    --color-card: #221a35;
+    --bg-orange: rgb(39, 26, 8);
+    
+    --color-purple: #7b3fc4;
+    --color-purple-light: #9d5fe0;
+    --color-orange: #d4820a;
+    --color-orange-light: #f0a030;
+    
+    --color-text: #ffffff;
+    --color-text-secondary: #b0a8c8;
+    --color-text-muted: #6b6080;
+    
+    --color-border: #2e2448;
+    
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-pill: 100px;
+    
+    --font-heading: 'Vela Sans', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    color: #ffffff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+body {
+    /* background: linear-gradient(110deg, var(--color-bg), var(--bg-orange), var(--color-bg)); */
+    background: linear-gradient(110deg, var(--color-bg), var(--color-surface), var(--color-bg));
+    font-family: var(--font-body);
+    color: var(--color-text);
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text);
+    transition: 0.3s all ease;
+}
+a:hover {
+    transform: translateY(-2px);
+}
+
+.logo {
+    letter-spacing: -10px;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.left nav {
+    font-weight: 550;
+    font-size: 30px;
+}
+
+.sign-in {
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--color-text);
+    background-color: var(--color-surface);
+    border-radius: 40px;
+    padding: 15px 45px;
+    border: 2px white solid;
+    color: var(--color-text);
+    transition: 0.3s all ease;
+    margin: 2rem;
+}
+.sign-in:hover {
+    background-color: var(--color-border);
+    transform: translateY(-2px);
+}
+.sign-in:active {
+    background-color: var(--color-orange);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    background-color: var(--color-card);
+    border-bottom: 4px var(--color-border) solid;
+    margin-bottom: 2rem;
+}
+
+.left {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    margin: 3rem;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Form itself */
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+fieldset {
+    background-color: var(--color-card);
+    border: 2px var(--color-border) solid;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+    width: 480px;
+}
+
+legend {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+input {
+    max-width: 200px;
+    background: none;
+    border: none;
+    border-bottom: 3px var(--color-orange) solid;
+    outline: none;
+    padding: 0.75rem 1rem;
+    font-size: 20px;
+    color: white;
+}
+
+select {
+    max-width: 200px;
+    background: none;
+    border: none;
+    border-bottom: 3px var(--color-orange) solid;
+    outline: none;
+    padding: 0.75rem 1rem;
+    font-size: 20px;
+    color: white;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.radio-group {
+    display: flex;
+    gap: 1.5rem;
+}
+
+#book {
+    background-color: var(--color-purple);
+    border-radius: 30px;
+    padding: 1rem;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+}
