@@ -17,6 +17,10 @@ async function loadRooms() {
                         <button class="room-more-btn" type="button">Подробнее</button>
                     </div>`;
         containter.appendChild(card);
+
+        card.querySelector('.room-more-btn').addEventListener('click', () => {
+            window.location.href = `room.html?id=${room.id}`;
+        });
     });
 };
 

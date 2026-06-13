@@ -11,7 +11,7 @@ async function getBookingByID(req, res) {
 };
 
 async function createBooking(req, res) {
-    const booking = await bdb.createBooking(req.body.guest_id, req.body.arrive_date, req.body.departyre_date);
+    const booking = await bdb.createBooking(req.body.guest_id, req.body.arrive_date, req.body.departure_date);
     res.json(booking);
 };
 

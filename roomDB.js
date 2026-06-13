@@ -6,22 +6,22 @@ async function getAllRooms() {
 };
 
 async function getRoomByID(id) {
-    const result = await pool.query('SELECT * FROM rooms WHERE id=$1', [id]);
+    const result = await pool.query('SELECT * FROM room WHERE id=$1', [id]);
     return result.rows;
 };
 
 async function createRoom(room_number, price, type) {
-    const result = await pool.query('INSERT INTO rooms (room_number, price, type) VALUES ($1, $2, $3)', [room_number, price, type]);
+    const result = await pool.query('INSERT INTO room (room_number, price, type) VALUES ($1, $2, $3)', [room_number, price, type]);
     return result.rows;
 };
 
 async function updateRoom(id, room_number, price, type) {
-    const result = await pool.query('UPDATE rooms SET room_number=$1, price=$2, type=$3 WHERE id=$4', [room_number, price, type, id]);
+    const result = await pool.query('UPDATE room SET room_number=$1, price=$2, type=$3 WHERE id=$4', [room_number, price, type, id]);
     return result.rows;
 };
 
 async function deleteRoom(id) {
-    const result = await pool.query('DELETE FROM rooms WHERE id=$1', [id]);
+    const result = await pool.query('DELETE FROM room WHERE id=$1', [id]);
     return result.rows;
 }
 
